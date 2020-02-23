@@ -1,0 +1,13 @@
+<dubbo:monitor protocol="register'></
+
+dubbo.properties
+
+dubbo-monitor-simple  
+  config/dubbo.properties
+dubbo.registry.address=
+dubbo.protocol.port=
+dubbo.jetty.port=
+dubbo.jetty.directory=
+  
+  bin/
+

@@ -1,0 +1,17 @@
+
+./zkCli.sh
+ls ls2 help, ls /, ls /zookeeper, 目录 即 节点。 ls2 /
+watch监督者
+ls /zookeeper
+目录 即 节点
+ls2 /
+get stat, stat /, ls2  =  ls + stat
+
+cZxid: created by Zookeeper, id of Znode
+ctime: create time
+mtime: modified time
+pZxid:  指子节点的id，The zxid of the change that last modified children of this znode.
+cversion: children version， 监控子节点的变化
+dataVersion:  data version， 监控数据的变化
+aclVersion: ACL version
+numChildren: number of children

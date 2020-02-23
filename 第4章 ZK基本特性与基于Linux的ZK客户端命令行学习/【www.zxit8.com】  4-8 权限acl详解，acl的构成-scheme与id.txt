@@ -1,0 +1,20 @@
+ACL: access control list
+设置节点的读写权限
+permissions权限范围及角色 Shiro权限列表 Shiro权限框架
+getAcl / setAcl
+addauth 注册授权用户 命令行里面是明文， zk系统里是加密的形式存储
+clear
+
+getAcl /imooc/abc
+cdrwa
+setAcl 
+acl[scheme:id:permissions]
+permissions:权限组合字符串
+schema
+world: anyone:[permissions]   world下只有一个id anyone
+auth:user:password:[permissions] 认证登录 需要注册用户有权限访问
+digest:username:BASE64(SHA1(password));[permissions] 需要密码加密才能访问
+  推荐用digest 安全
+ip:192.168.1.1:[permissions] 限制ip(按业务划分)进行访问
+super: 超级管理员 修改文档
+项目经理、开发：可读    运维、技术总监：super

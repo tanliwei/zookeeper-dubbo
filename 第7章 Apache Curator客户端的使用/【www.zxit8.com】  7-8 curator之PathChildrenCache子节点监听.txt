@@ -1,0 +1,2 @@
+childrenCache.getListenable().addListener(new PathChildrenCacheListener() {
+不受孙子节点的创建的影响。

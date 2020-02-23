@@ -1,0 +1,1 @@
+zkServer.getZookeeper().delete("/test-delete-node", 0, new DeleteCallBack(), ctx);

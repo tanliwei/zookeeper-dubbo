@@ -1,0 +1,16 @@
+乐观锁的实现
+set /imooc 123 1  ;  set path data [version]
+dataVersion = 2
+set /imooc 123 1
+version No is not valid : imooc
+
+delete path [version]
+ls /imooc
+#只能删除最新的版本的内容
+delete /imooc/sec0001 versionNum
+
+
+zookeeper 3.5.6
+ set [-s] [-v version] path data
+delete [-v version] path
+删除之后 带-s 参数重新创建znode， 序号不是max(current znodes)+1, 是 created number + 1

@@ -1,0 +1,14 @@
+主从节点 心跳机制（选举模式）
+    x:Master
+y:Slave  z:Slave2
+x宕机
+竞争
+    z:Master
+    y:Slave
+x恢复
+    z:Master
+x:Slave    y:Slave
+1master 2Slave（用于竞争）
+
+myid 1/2/3 对应 server1/2/3
+./zkCli.sh -server [ip]:[port]

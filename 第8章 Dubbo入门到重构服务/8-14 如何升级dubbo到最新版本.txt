@@ -1,0 +1,3 @@
+2.6.0
+javax.servlet-api
+qos-server  localhost:22222

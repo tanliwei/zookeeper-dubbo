@@ -1,0 +1,12 @@
+zoo.cfg
+
+tickTime  session timeout : N * tickTime
+ 
+initTime   集群 从节点 同步到主节点的 初始化连接时间 M （* ticketTime）
+syncTime  集群  （主节点发送到从节点的）心跳时间
+dataDir  zookeeper 的数据
+dataLogDir 日志目录， 不配 则和 dataDir 共用目录
+clientPort 连接服务器的端口 2181
+
+./zkServer {status|restart|...}
+./skServer start/stop/restart

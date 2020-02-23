@@ -1,0 +1,8 @@
+基本操作
+客户端连接
+Znode结构
+关闭连接
+./zkCli.sh
+help
+ls /zookeeper
+Ctrl + C

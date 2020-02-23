@@ -1,0 +1,8 @@
+ip:192.168.1.1:cdrwa  ;限制ip 的访问权限  
+setAcl /names/ip ip:192.168.1.7:cdrwa 
+
+#本地测试失败
+[zk: localhost:2181(CONNECTED) 34] getAcl /name/ip
+Authentication is not valid : /name/ip
+[zk: localhost:2181(CONNECTED) 35] get /name/ip
+org.apache.zookeeper.KeeperException$NoAuthException: KeeperErrorCode = NoAuth for /name/ip

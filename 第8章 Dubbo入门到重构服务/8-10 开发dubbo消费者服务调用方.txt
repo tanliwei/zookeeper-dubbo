@@ -1,0 +1,7 @@
+dubbo:reference
+check="true" 检查服务
+init="true" 懒加载
+
+Error running 'imooc-dubbo-item-service':
+Unable to open debugger (127.0.0.1:56929): java.net.SocketExeption "socet closed"
+JMX port: 1095

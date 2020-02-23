@@ -1,0 +1,9 @@
+//如何给节点设置为空对象null
+//List<String> childNodes = cto.client.getChildren();//不会获取孙子节点
+//创建子节点不修改父节点的 dataVersion
+//删除的是imooc 子节点
+		String nodePath = "/super/imooc";
+//		cto.client.create().creatingParentsIfNeeded()
+//			.withMode(CreateMode.PERSISTENT)
+//			.withACL(ZooDefs.Ids.OPEN_ACL_UNSAFE)
+//			.forPath(nodePath, data);

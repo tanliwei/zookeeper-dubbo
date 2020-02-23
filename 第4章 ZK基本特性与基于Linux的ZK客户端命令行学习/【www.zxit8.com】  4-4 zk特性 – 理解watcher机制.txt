@@ -1,0 +1,6 @@
+节点监督者watcher
+znode发生变化，则触发watcher事件， 类似sql trigger
+zk的watcher默认是一次性的,  
+	可以通过apache一个客户端设置成永久的
+父节点和子节点的增删 都能够触发其watcher
+不同类型的事件：创建事件、删除事件、数据变化事件

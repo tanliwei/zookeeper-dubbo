@@ -1,0 +1,7 @@
+		String IP = "127.0.0.1";
+		String path = "/aclimooc/iptest" + IP;
+		// ip方式的acl
+		List<ACL> aclsIP = new ArrayList<ACL>();
+		Id ipId1 = new Id("ip", IP);//String IP = "127.0.0.1";
+		aclsIP.add(new ACL(Perms.ALL, ipId1));
+		zkServer.createZKNode(path, "iptest".getBytes(), aclsIP);

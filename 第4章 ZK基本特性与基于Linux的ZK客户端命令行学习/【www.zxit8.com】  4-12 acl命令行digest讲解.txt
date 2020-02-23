@@ -1,0 +1,5 @@
+setAcl /name/test digest:user1:a9l5yfb9zl8WCXjVmi5/XOC0Ep4=:cdwra
+addauth digest user1:pwd1  ；相当于登录操作
+getAcl /name/test
+
+在做运维的事情

@@ -1,0 +1,2 @@
+//watch 是一次性的
+  byte[] resByte = zkServer.getZookeeper().getData("/imooc", true, stat);

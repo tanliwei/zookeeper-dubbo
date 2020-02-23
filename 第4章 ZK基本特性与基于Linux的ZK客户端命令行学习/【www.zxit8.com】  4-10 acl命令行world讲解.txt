@@ -1,0 +1,11 @@
+world:anyone:cdrwa
+'world,'anyone
+: cdrwa
+setAcl /imooc/abc world:anyone:crwa
+getAcl /imooc/abc
+d:删除子节点的权限
+create /imooc/abc/xyz 123
+delete /imooc/abc/xyz    
+Authentication is not valid : /imooc/abc/xyz       ;3.5.6测试 可以delete 在拥有 a 的权限时
+setAcl /imooc/abc world:anyone:rda
+delete /imooc/abc/xyz

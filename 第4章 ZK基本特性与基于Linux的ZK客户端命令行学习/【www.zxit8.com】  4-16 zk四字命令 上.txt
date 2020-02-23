@@ -1,0 +1,14 @@
+Four Letter Words
+提供简写命令和服务器交互 3.4.11
+
+yum install nc  ； netcat for windows
+
+echo [command] | nc [ip] [port]
+
+stat  是否mode
+ruok 
+imok
+dump
+conf
+cons
+envi

@@ -1,0 +1,11 @@
+NodeChildrenChanged: create, delete; 不关注子节点的操作具体细节
+ls /imooc watch
+ls /imooc watch
+set /imooc/abc 123
+#更新子节点 不会触发 父节点的NodeDataChanged Event
+get /imooc/xyz watch
+set /imooc/xyz 8080
+NodeDataChanged
+
+
+在3.5.6版本里，子节点的删除创建 和 父节点的 watch事件无关

@@ -1,0 +1,24 @@
+session原理
+客户端与服务端之间的连接
+设置会话超时时间
+心跳结束  客户端向服务端发送心跳维持session
+如果没有心跳， Session过期， 会话过期，临时节点znode会被抛弃， 
+心跳机制 客服端send to server 的ping包请求
+
+create /imooc imooc-data 默认是持久的节点
+create -e /imooc、zk imooc-data 临时节点
+ephemeralOwner属性 可判断节点是否是 临时节点， 0x0 持久节点 否则为持久节点
+检查节点发现心跳没有收到(有个心跳时间间隔)时才会删掉 znode节点 paraent znode's cversion increased
+
+sequence 创建顺序节点
+[zk: localhost:2181(CONNECTED) 1] create -s /goover/a
+Created /goover/a0000000001
+
+[zk: localhost:2181(CONNECTED) 4] create -s /goover seq
+Created /goover0000000018
+
+create -s /imooc/sec seq
+Created /imooc/sec00000000012
+
+get /imooc/sec0000000002
+seq

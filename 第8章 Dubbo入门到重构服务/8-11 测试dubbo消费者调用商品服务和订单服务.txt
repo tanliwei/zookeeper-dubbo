@@ -1,0 +1,8 @@
+com.alibaba.dubbo.rpc.RpcException: Failed to invoke the method getItemCounts in the service com.imooc.item.service.ItemsService. 
+Tried 4 times of the providers [192.168.99.1:20880] (1/1) from the registry 127.0.0.1:2181 on the consumer 192.168.99.1 using the dubbo version 2.5.3. 
+Last error is: Invoke remote method timeout. method: 
+getItemCounts, provider: dubbo://192.168.99.1:20880/com.imooc.item.service.ItemsService?anyhost=true&application=imooc-dubbo-web&check=false&dubbo=2.5.3&init=true&interface=com.imooc.item.service.ItemsService&methods=getItemCounts,getItem,displayReduceCounts&pid=19220&retries=3&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1580458602580, cause: Waiting server-side response timeout by scan timer. start time: 2020-01-31 16:27:05.674, end time: 2020-01-31 16:27:06.687, client elapsed: 3 ms, server elapsed: 1009 ms, timeout: 1000 ms, request: Request [id=26, version=2.0.0, twoway=true, event=false, broken=false, data=RpcInvocation [methodName=getItemCounts, parameterTypes=[class java.lang.String], arguments=[1], attachments={path=com.imooc.item.service.ItemsService, interface=com.imooc.item.service.ItemsService, version=0.0.0}]], channel: /192.168.99.1:50869 -> /192.168.99.1:20880
+
+<dubbo:service  timeout="12000" 
+
+imooc-dubbo-order-service 与 imooc-dubbo-item-service 以main方式运行， maven build 参数中的port

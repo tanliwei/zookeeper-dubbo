@@ -1,0 +1,29 @@
+world:anyone:cdrwa
+
+auth:user:pwd:cdrwa
+digest:user:BASE64(SHA1(pwd)):cdrwa
+addauth digest user1:pwd1
+
+create /names/imooc imooc
+getAcl /names/imooc
+setAcl /names/imooc auth:user1:pwd1:cdrwa
+Acl is not valid   ：未注册
+addauth digest imooc:pwd; 
+setAcl /names/imooc auth:user1:pwd1:cdrwa
+setAcl /names/imooc auth:jack:pwd:cda  ; digest 的用户名和digest密码不变， 但权限可变
+setAcl /names/imooc auth::cdrwa
+
+
+[zk: localhost:2181(CONNECTED) 63] getAcl /name/imooc
+'digest,'user1:a9l5yfb9zl8WCXjVmi5/XOC0Ep4=
+: cdrwa
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,1 @@
+KeeperException$NoAuthException: KeeperErrorCode = NoAuth for /aclimooc/testdigest

@@ -1,0 +1,10 @@
+Java 原始API
+手动重连
+watch注册一次后失效
+不支持递归创建节点
+
+curator
+解决watcher注册一次失效问题
+简单易用
+提供解决方案：分布式锁
+提供Zookeeper工具类

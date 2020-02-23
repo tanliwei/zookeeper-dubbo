@@ -1,0 +1,7 @@
+Super
+ 修改zkServer.cmd 增加super管理员
+   call %JAVA%  "-Dzookeeper.DigestAuthenticationProvider.superDigest=user1:a9l5yfb9zl8WCXjVmi5/XOC0Ep4="
+ 重启
+
+zookeeper-start-base
+DigestAuthenticationProvider

@@ -1,0 +1,2 @@
+创建zk节点 临时节点  异常关闭client session 
+等待释放 挂起 CountDownLatch

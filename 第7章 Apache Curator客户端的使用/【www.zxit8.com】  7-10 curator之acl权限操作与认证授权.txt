@@ -1,0 +1,2 @@
+applyToParents apply to the  created parents.
+Exception in thread "main" org.apache.zookeeper.KeeperException$NoAuthException: KeeperErrorCode = NoAuth for

@@ -1,0 +1,24 @@
+设置watcher get path [watch]
+创建父节点 	NodeCreated
+stat /imooc watch
+Node does not exists: /imooc  ；但是事件还是会被创建
+create /imooc 123
+WATCHER::
+WatchEvent： NodeDataChanged
+
+get /imooc watch
+set /imooc 456
+WatchedEvent  NodeDataChanged /imooc
+
+NodeDeleted
+delete /imooc
+WatchedEvent NodeDeleted /imooc
+
+stat [-w] path
+ ls [-s] [-w] [-R] path
+get [-s] [-w] path
+
+
+
+
+

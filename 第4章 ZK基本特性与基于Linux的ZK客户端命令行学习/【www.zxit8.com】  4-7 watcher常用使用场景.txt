@@ -1,0 +1,6 @@
+作用：当做触发器使用
+统一资源配置
+/imooc/sqlConfig  /imooc/sqlConfig  /imooc/sqlConfig  
+
+
+host machine update ->  /imooc/sqlConfig  -》 update client

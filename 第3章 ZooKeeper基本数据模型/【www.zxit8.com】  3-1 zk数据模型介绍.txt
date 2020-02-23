@@ -1,0 +1,13 @@
+zookeeper数据结构
+是树形结构
+    a
+ b   c
+d   e  f
+是 linux 文件目录
+每个节点znode 可有子节点 可有数据
+永久节点（持久化 session失效后数据还在） ，session失效 临时节点 数据丢失
+zk znode 有各自的版本号
+Znode 数据变化 + 乐观锁
+删除/修改过时的节点  检测版本号
+zk节点的数据量 几K即可 不适合大数据
+节点可以设置权限Auth Control Level 限制用户访问 读写权限

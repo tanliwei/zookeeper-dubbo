@@ -1,0 +1,61 @@
+
+com.alibaba.dubbo.rpc.RpcException: Failed to invoke the method getItemCounts in the service com.imooc.item.service.ItemsService. 
+Tried 4 times of the providers [192.168.99.1:20880] (1/1) from the registry 127.0.0.1:2181 on the consumer 192.168.99.1 using the dubbo version 2.5.3. 
+Last error is: Invoke remote method timeout. method: 
+getItemCounts, provider: dubbo://192.168.99.1:20880/com.imooc.item.service.ItemsService?anyhost=true&application=imooc-dubbo-web&check=false&dubbo=2.5.3&init=true&interface=com.imooc.item.service.ItemsService&methods=getItemCounts,getItem,displayReduceCounts&pid=19220&retries=3&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1580458602580, cause: Waiting server-side response timeout by scan timer. start time: 2020-01-31 16:27:05.674, end time: 2020-01-31 16:27:06.687, client elapsed: 3 ms, server elapsed: 1009 ms, timeout: 1000 ms, request: Request [id=26, version=2.0.0, twoway=true, event=false, broken=false, data=RpcInvocation [methodName=getItemCounts, parameterTypes=[class java.lang.String], arguments=[1], attachments={path=com.imooc.item.service.ItemsService, interface=com.imooc.item.service.ItemsService, version=0.0.0}]], channel: /192.168.99.1:50869 -> /192.168.99.1:20880
+
+<dubbo:service  timeout="12000" 
+imooc-dubbo-order-service 与 imooc-dubbo-item-service 以main方式运行， maven build 参数中的port
+
+Exception in thread "main" 
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss   ?  debug会出现这个Exception
+org.apache.zookeeper.KeeperException$SessionExpiredException: KeeperErrorCode = Session expired for /testnode1  ? debug会出现这个Exception
+
+No appenders could be found for logger(log4j)? https://stackoverflow.com/questions/12532339/no-appenders-could-be-found-for-loggerlog4j
+
+==第5章 选举模式和ZooKeeper的集群安装\
+zkCli.cmd -server localhost:2182
+- Cannot open channel to 2 at election address /0.0.0.0:3889
+ 启动 2
+
+:QuorumCnxManager@679] - Cannot open channel to 3 at election address /127.0.0.1:3890
+server.1=0.0.0.0:2888:3888
+server.2=0.0.0.0:2889:3889
+server.3=0.0.0.0:2890:3890 
+如果本机端口监听在0.0.0.0上，那么其他服务器通过本机的公网ip则可以连接到本机的该端口，但是如果通过本机的公网ip监听，那么是无法打开想要被监听的端口的。 https://blog.csdn.net/qq_35457078/article/details/86064199x
+
+Zookeeper 错误 Will not attempt to authenticate using SASL (unknown error)
+ 未启动 zkServer.cmd
+
+C:\Apache\apache-zookeeper-3.5.6-bin\apache-zookeeper-3.5.6-bin\bin
+https://blog.csdn.net/qq_36148847/article/details/80114283
+
+zkServer.cmd
+zkCli.cmd
+
+https://issues.apache.org/jira/browse/ZOOKEEPER-1803  Add description for pzxid in programmer's guide.
+http://zookeeper-user.578899.n2.nabble.com/pzxid-field-in-stat-structure-td6896123.html  Oct 15, 2011 3:49pm
+
+install nc
+I used https://joncraton.org/files/nc111nt.zip and it works.
+Zip is password protected. Pwd: nc
+
+C:\Users\admin>echo ruok | nc localhost 2181
+ruok is not executed because it is not in the whitelist.
+
+我们在zoo.cfg中添加如下一行代码并保存退出
+#开启四字命令
+4lw.commands.whitelist=*
+重启命令:
+./zkServer.sh  restart
+
+http://zookeeper.apache.org/doc/r3.4.10/zookeeperAdmin.html
+New in 3.4.10: This property contains a list of comma separated Four Letter Words commands. It is introduced to provide fine grained control over the set of commands ZooKeeper can execute, so users can turn off certain commands if necessary. By default it contains all supported four letter word commands except "wchp" and "wchc", if the property is not specified. If the property is specified, then only commands listed in the whitelist are enabled.
+
+Here's an example of the configuration that enables stat, ruok, conf, and isro command while disabling the rest of Four Letter Words command:
+
+                4lw.commands.whitelist=stat, ruok, conf, isro
+              
+Users can also use asterisk option so they don't have to include every command one by one in the list. As an example, this will enable all four letter word commands:
+
+                4lw.commands.whitelist=*

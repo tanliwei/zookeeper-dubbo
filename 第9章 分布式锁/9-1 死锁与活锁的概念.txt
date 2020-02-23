@@ -1,0 +1,4 @@
+死锁 huosuo
+for update 悲观锁，小系统
+
+活锁
